@@ -23,8 +23,8 @@ import io.apicurio.registry.resolver.strategy.ArtifactReferenceResolverStrategy;
 import io.apicurio.registry.resolver.utils.Utils;
 import io.apicurio.registry.rest.client.RegistryClient;
 import io.apicurio.registry.rest.client.RegistryClientFactory;
-import io.apicurio.registry.rest.v2.beans.ArtifactMetaData;
-import io.apicurio.registry.rest.v2.beans.VersionMetaData;
+//import io.apicurio.registry.rest.v2.beans.ArtifactMetaData;
+//import io.apicurio.registry.rest.v2.beans.VersionMetaData;
 import io.apicurio.registry.serde.data.KafkaSerdeMetadata;
 import io.apicurio.registry.serde.data.KafkaSerdeRecord;
 import io.apicurio.registry.serde.strategy.ArtifactReference;
@@ -191,7 +191,7 @@ public abstract class AbstractSchemaResolver<S, T> implements SchemaResolver<S, 
      * the artifact resolver strategy and then override the values from that strategy with any explicitly configured
      * values (groupId, artifactId, version).
      * @param topic
-     * @param headers
+//     * @param headers
      * @param data
      * @param parsedSchema
      */
@@ -306,19 +306,19 @@ public abstract class AbstractSchemaResolver<S, T> implements SchemaResolver<S, 
         return RegistryClientFactory.create(registryUrl, config.originals(), auth);
     }
 
-    protected void loadFromArtifactMetaData(ArtifactMetaData artifactMetadata, SchemaLookupResult.SchemaLookupResultBuilder<S> resultBuilder) {
-        resultBuilder.globalId(artifactMetadata.getGlobalId());
-        resultBuilder.contentId(artifactMetadata.getContentId());
-        resultBuilder.groupId(artifactMetadata.getGroupId());
-        resultBuilder.artifactId(artifactMetadata.getId());
-        resultBuilder.version(String.valueOf(artifactMetadata.getVersion()));
-    }
-
-    protected void loadFromArtifactMetaData(VersionMetaData artifactMetadata, SchemaLookupResult.SchemaLookupResultBuilder<S> resultBuilder) {
-        resultBuilder.globalId(artifactMetadata.getGlobalId());
-        resultBuilder.contentId(artifactMetadata.getContentId());
-        resultBuilder.groupId(artifactMetadata.getGroupId());
-        resultBuilder.artifactId(artifactMetadata.getId());
-        resultBuilder.version(String.valueOf(artifactMetadata.getVersion()));
-    }
+//    protected void loadFromArtifactMetaData(ArtifactMetaData artifactMetadata, SchemaLookupResult.SchemaLookupResultBuilder<S> resultBuilder) {
+//        resultBuilder.globalId(artifactMetadata.getGlobalId());
+//        resultBuilder.contentId(artifactMetadata.getContentId());
+//        resultBuilder.groupId(artifactMetadata.getGroupId());
+//        resultBuilder.artifactId(artifactMetadata.getId());
+//        resultBuilder.version(String.valueOf(artifactMetadata.getVersion()));
+//    }
+//
+//    protected void loadFromArtifactMetaData(VersionMetaData artifactMetadata, SchemaLookupResult.SchemaLookupResultBuilder<S> resultBuilder) {
+//        resultBuilder.globalId(artifactMetadata.getGlobalId());
+//        resultBuilder.contentId(artifactMetadata.getContentId());
+//        resultBuilder.groupId(artifactMetadata.getGroupId());
+//        resultBuilder.artifactId(artifactMetadata.getId());
+//        resultBuilder.version(String.valueOf(artifactMetadata.getVersion()));
+//    }
 }

@@ -20,7 +20,7 @@ import java.util.Properties;
 
 import io.apicurio.registry.resolver.DefaultSchemaResolver;
 import io.apicurio.registry.resolver.SchemaResolverConfig;
-import io.apicurio.registry.rest.v2.beans.IfExists;
+//import io.apicurio.registry.rest.v2.beans.IfExists;
 import io.apicurio.registry.serde.config.IdOption;
 import io.apicurio.registry.serde.fallback.DefaultFallbackArtifactProvider;
 import io.apicurio.registry.serde.fallback.FallbackArtifactProvider;
@@ -68,7 +68,7 @@ public class SerdeConfig {
     public static final boolean AUTO_REGISTER_ARTIFACT_DEFAULT = SchemaResolverConfig.AUTO_REGISTER_ARTIFACT_DEFAULT;
 
     /**
-     * Optional, one of {@link IfExists} to indicate the behavior of the client when there is a conflict creating an artifact because the artifact already exists.
+     * Optional, one of to indicate the behavior of the client when there is a conflict creating an artifact because the artifact already exists.
      */
     public static final String AUTO_REGISTER_ARTIFACT_IF_EXISTS = SchemaResolverConfig.AUTO_REGISTER_ARTIFACT_IF_EXISTS;
     public static final String AUTO_REGISTER_ARTIFACT_IF_EXISTS_DEFAULT = SchemaResolverConfig.AUTO_REGISTER_ARTIFACT_IF_EXISTS_DEFAULT;
@@ -149,6 +149,7 @@ public class SerdeConfig {
      */
     public static final String ID_HANDLER = "apicurio.registry.id-handler";
     public static final String ID_HANDLER_DEFAULT = DefaultIdHandler.class.getName();
+    public static final String NATS_ID_HANDLER = NATSIdHandler.class.getName();
 
     /**
      * Shortcut for enabling the Legacy (Confluent compatible) implementation of {@link IdHandler}.  Should

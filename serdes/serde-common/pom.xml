@@ -31,6 +31,22 @@
             <artifactId>junit-jupiter</artifactId>
             <scope>test</scope>
         </dependency>
+      <dependency>
+        <groupId>io.apicurio</groupId>
+        <artifactId>apicurio-registry-common</artifactId>
+      </dependency>
+        <dependency>
+            <groupId>io.apicurio</groupId>
+            <artifactId>apicurio-registry-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.apicurio</groupId>
+            <artifactId>apicurio-registry-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.apicurio</groupId>
+            <artifactId>apicurio-registry-common</artifactId>
+        </dependency>
     </dependencies>
     
 </project>
